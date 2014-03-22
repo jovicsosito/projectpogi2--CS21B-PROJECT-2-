@@ -1,0 +1,35 @@
+<center><h1>TASKS</h1>
+
+<table border=1>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Category</th>
+      <th>Due date</th>
+      <th>Is complete</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.task %></td>
+        <td><%= task.category %></td>
+        <td><%= task.due_date %></td>
+        <td><%= task.is_complete %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
+</center>
+<br><br><br><br><br><br><hr><footer>John Victor Sosito and Paolo Gabriel Alilam 2013</footer>

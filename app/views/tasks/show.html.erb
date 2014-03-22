@@ -1,0 +1,26 @@
+<body background="pogiproblems.png"><center><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @task.task %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @task.is_complete %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %></center>
+<br><br><br><br><br><br><hr><footer>John Victor Sosito and Paolo Gabriel Alilam 2013</footer>
+</body>
